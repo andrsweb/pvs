@@ -18,7 +18,7 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $bg
 }
 
 img {
@@ -39,6 +39,9 @@ ul {
 	width: 100%;
 	min-height: 100vh;
 	overflow: hidden;
+	background-image: url('../img/bg.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	.footer {
 		margin-top: auto
