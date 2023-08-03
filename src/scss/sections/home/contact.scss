@@ -1,15 +1,54 @@
 .contact {
-	padding: 100px 0 10px;
+	padding: 40px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 100px 0 10px;
+	}
+		
 
 	&__wrapper {
 		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $xl) {
+			flex-direction: row;
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+
+		&.desktop {
+			display: none;
+
+			@media all and (min-width: $xl) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		&.mobile {
+			margin-top: 80px;
+
+			@media all and (min-width: $xl) {
+				display: none;
+			}
+		}
 	}
 
 	&__info {
-		width: 50%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
-		margin-right: 59px;
+		text-align: center;
+		
+
+		@media all and (min-width: $xl) {
+			width: 50%;
+			margin-right: 59px;
+			text-align: left;
+		}
 
 		.h2 {
 			font-family: $ff-title;
@@ -20,7 +59,7 @@
 			text-transform: uppercase;
 			color: #8E98F5;
 
-			@media all and (min-width: $md) {
+			@media all and (min-width: $lg) {
 				font-size: 108.812px;
 			}
 		}
@@ -28,11 +67,15 @@
 		&_text {
 			color: #909AF3;
 			font-family: $ff;
-			font-size: 22.87px;
+			font-size: 13px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: 32.018px;
 			margin-bottom: 45px;
+
+			@media all and (min-width: $lg) {
+				font-size: 22.87px;
+			}
 		}
 
 		&_link {
@@ -49,11 +92,20 @@
 	}
 
 	&__link_desc {
-		font-size: 23.681px;
+		font-size: 10px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
-		color: #B2BAFC; 
+		color: #B2BAFC;
+		text-align: left;
+
+		@media all and (min-width: $sm) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 23.681px;
+		}
 	}
 
 	&__link_wrapper {
@@ -61,15 +113,28 @@
 		align-items: center;
 		color: #B2BAFC;
 		font-family:$ff;
-		font-size: 23.681px;
+		font-size: 15px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: normal;
 		transition: opacity ease $tr;
 		margin-bottom: 10px;
 
+		@media all and (min-width: 576px) {
+			font-size: 20px;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 23.681px;
+		}
+
 		picture {
 			margin-right: 11px;
+			width: 21px;
+
+			@media all and (min-width: $lg) {
+				width: 41px;
+			}
 		}
 
 		&:hover {
@@ -78,7 +143,13 @@
 	}
 
 	&__form {
-		width: calc(50% - 49px);
+		width: 100%;
+		padding: 0 10%;
+
+		@media all and (min-width: $xl) {
+			width: calc(50% - 49px);
+			padding: 0;
+		}
 
 		input {
 			margin-bottom: 28px;
@@ -103,7 +174,7 @@
 	.send {
 		color: #909AF3;
 		font-family: $ff;
-		font-size: 33.847px;
+		font-size: 17px;
 		font-style: normal;
 		font-weight: 600;
 		line-height: normal;
@@ -115,8 +186,17 @@
 		cursor: pointer;
 		transition: opacity ease $tr;
 
+		@media all and (min-width: $md) {
+			font-size: 33.847px;
+		}
+
 		picture {
 			margin-left: 15px;
+			width: 27px;
+
+			@media all and (min-width: $md) {
+				width: 51px;
+			}
 		}
 
 		&:hover {

@@ -2,6 +2,14 @@
 	padding: 100px 0 100px;
 
 	@media all and (min-width: $lg) {
+		padding: 100px 0 300px;
+	}
+
+	@media all and (min-width: $xl) {
+		padding: 100px 0 400px;
+	}
+
+	@media all and (min-width: $xxl) {
 		padding: 100px 0 600px;
 	}
 
