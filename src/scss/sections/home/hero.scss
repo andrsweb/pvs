@@ -1,0 +1,49 @@
+.hero {
+	padding: 150px 0 50px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__info {
+		width: 54%;
+		padding-top: 9%;
+	}
+
+	&__img {
+		width: 46%;
+
+		img {
+			@media all and (min-width: $xl) {
+				max-width: 130%;
+			}
+			
+		}
+	}
+
+	.h1 {
+		margin-bottom: 40px;
+	}
+
+	.h3 {
+		font-family: $ff-title;
+		font-size: 29px;
+		font-weight: $fw-bold;
+		line-height: 43px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #8E98F5;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-family: $ff-title;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 39px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #8E98F5;
+	}
+}
