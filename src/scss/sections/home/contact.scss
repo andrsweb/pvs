@@ -62,6 +62,7 @@
 		font-weight: $fw-regular;
 		line-height: normal;
 		transition: opacity ease $tr;
+		margin-bottom: 10px;
 
 		picture {
 			margin-right: 11px;
@@ -82,6 +83,10 @@
 		fieldset {
 			display: flex;
 			flex-direction: column;
+		}
+
+		textarea {
+			min-height: 227px;
 		}
 	}
 

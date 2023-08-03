@@ -1,0 +1,38 @@
+.about__hero {
+	padding: 150px 0 50px;
+
+	.h1 {
+		font-family: $ff;
+		font-size: 77.09px;
+		font-style: normal;
+		font-weight: $fw-bold;
+		line-height: normaz;
+		text-transform: uppercase; 
+	}
+
+	&_wrapper {
+		display: flex;
+		position: relative;
+	}
+
+	&_info {
+		max-width: 1100px;
+	}
+
+	.about__info_text {
+		color: #98A1F7;
+		font-family: $ff;
+		font-size: 19.04px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 180%;
+		letter-spacing: 0.286px;
+	}
+
+	.hero__img {
+		position: absolute;
+		right: -17%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
