@@ -1,10 +1,5 @@
 .contact {
-	padding: 40px 0;
-
-	@media all and (min-width: $lg) {
-		padding: 100px 0 10px;
-	}
-		
+	padding: 100px 0 10px;
 
 	&__wrapper {
 		display: flex;
@@ -205,6 +200,10 @@
 	}
 }
 
-.contacts-page {
-	padding: 200px 0 10px;
+.contacts__page {
+	padding: 150px 0 10px;
+
+	@media all and (min-width: $md) {
+		padding: 220px 0 10px;
+	}
 }

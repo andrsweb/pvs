@@ -29,6 +29,10 @@ h1, .h1 {
 	}
 
 	@media all and (min-width: $lg) {
+		font-size: 100px;
+	}
+
+	@media all and (min-width: $xxl) {
 		font-size: 143px;
 		line-height: 144px;
 	}
