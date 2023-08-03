@@ -12,7 +12,7 @@ const callPopup = () => {
 	const buttons = document.querySelectorAll('.frame-wrapper')
 	const video = document.querySelector('.video__popup_items')
 	const closeButton = popup.querySelector('.close__button')
-	setTargetElement( document.querySelector( '#popup-lock' ) )
+	setTargetElement( document.querySelector( '#popup-lock' ) ) // Target element for body lock
 
 	if (!popup && !buttons.length) return
 

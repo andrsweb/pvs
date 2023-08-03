@@ -207,3 +207,25 @@
 		padding: 220px 0 10px;
 	}
 }
+
+.form-response {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	margin-top: 10px;
+}
+
+.success {
+	font-family: $ff;
+	font-weight: $fw-bold;
+	color: green;
+	font-size: 20px;
+}
+
+.error {
+	font-family: $ff;
+	font-weight: $fw-bold;
+	font-size: 20px;
+	color: red;
+}
