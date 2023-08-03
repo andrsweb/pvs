@@ -1,0 +1,117 @@
+.contact {
+	padding: 100px 0 10px;
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__info {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		margin-right: 59px;
+
+		.h2 {
+			font-family: $ff-title;
+			font-size: 108.812px;
+			font-style: normal;
+			font-weight: $fw-bold;
+			line-height: normal;
+			text-transform: uppercase;
+			color: #8E98F5;
+		}
+
+		&_text {
+			color: #909AF3;
+			font-family: $ff;
+			font-size: 22.87px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 32.018px;
+			margin-bottom: 45px;
+		}
+
+		&_link {
+			display: flex;
+			flex-direction: column;
+			color: #B2BAFC;
+			font-family: $ff;
+			font-size: 30.087px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			margin-bottom: 52px;
+		}
+	}
+
+	&__link_desc {
+		font-size: 23.681px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		color: #B2BAFC; 
+	}
+
+	&__link_wrapper {
+		display: flex;
+		align-items: center;
+		color: #B2BAFC;
+		font-family:$ff;
+		font-size: 23.681px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		transition: opacity ease $tr;
+
+		picture {
+			margin-right: 11px;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__form {
+		width: calc(50% - 49px);
+
+		input {
+			margin-bottom: 28px;
+		}
+
+		fieldset {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.send__button_wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 38px;
+	}
+
+	.send {
+		color: #909AF3;
+		font-family: $ff;
+		font-size: 33.847px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 0;
+		cursor: pointer;
+		transition: opacity ease $tr;
+
+		picture {
+			margin-left: 15px;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+}

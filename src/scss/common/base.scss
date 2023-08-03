@@ -23,6 +23,7 @@ body {
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto
 }
@@ -31,6 +32,73 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+label {
+	color: #B3BAFC;
+	text-align: center;
+	font-family: $ff;
+	font-size: 34.721px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 180%;
+}
+
+input {
+	color: #767FCC;
+	font-family: $ff;
+	font-size: 23.712px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 180%;
+	background-color: #383284a6;
+	border: 0;
+	padding: 13px 13px 13px 33px;
+	border-radius: 9px;
+	transition: box-shadow ease $tr;
+
+
+	&::placeholder {
+		color: #767FCC;
+		font-family: $ff;
+		font-size: 23.712px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 180%;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 3px $accent;
+	}
+}
+
+textarea {
+	border: 0;
+	color: #767FCC;
+	font-family: $ff;
+	font-size: 23.712px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 180%;
+	margin: 0;
+	padding: 0;
+	resize: none;
+	background-color: #383284a6;
+	padding: 13px 13px 13px 33px;
+	border-radius: 9px;
+	transition: box-shadow ease $tr;
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 3px $accent;
+	}
 }
 
 .wrapper {

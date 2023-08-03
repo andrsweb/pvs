@@ -34,25 +34,25 @@
 
 			.help__card {
 				position: absolute;
-	
+
 				&:first-child {
-					left: -30px;
-					top:100px;
+					left: -1.56vw;
+					top: 5.21vw;
 				}
 
 				&:nth-child(2) {
-					left: 320px;
-					top: 50px;
+					left: 16.67vw;
+					top: 2.6vw;
 				}
 
 				&:nth-child(3) {
-					left: 150px;
-					top: 350px;
+					left: 7.81vw;
+					top: 18.23vw;
 				}
 
 				&:last-child {
-					left: 520px;
-					top: 340px;
+					left: 27.08vw;
+					top: 17.71vw;
 				}
 			}
 		}
@@ -66,36 +66,38 @@
 			position: absolute;
 
 			&:first-child {
-				right: 30px;
-				top: -100px;
+				right: 1.56vw;
+				top: -5.21vw;
 			}
-			
+
 			&:nth-child(2) {
-				left: 50px;
-				top: 140px;
+				left: 2.6vw;
+				top: 7.29vw;
 			}
 
 			&:nth-child(3) {
-				right: -20px;
-				top: 250px;
+				right: -1.04vw;
+				top: 13.02vw;
 			}
 
 			&:nth-child(4) {
-				left: 80px;
-				top: 450px;
+				left: 4.17vw;
+				top: 23.44vw;
 			}
 
 			&:nth-child(5) {
-				right: -100px;
-				top: 500px;
+				right: -5.21vw;
+				top: 26.04vw;
 			}
 
 			&:last-child {
-				left: 250px;
-				top: 740px;
+				left: 13.02vw;
+				top: 38.54vw;
 			}
 		}
 	}
+
+
 
 	&__card {
 		display: flex;
