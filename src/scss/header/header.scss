@@ -4,6 +4,11 @@
 	top: 45px;
 	width: 100vw;
 	z-index: 100;
+	transition: background-color ease $tr,
+				box-shadow ease $tr,
+				padding ease $tr,
+				top ease $tr,
+				backdrop-filter ease $tr;
 
 	.container {
 		display: flex;
@@ -11,6 +16,19 @@
 	}
 
 	&.scrolled {
+			top: 0;
+			padding: 10px 0;
+			background-color: rgba(17, 21, 39, 0.39);
+			backdrop-filter: blur(20px) saturate(1.7);
+			box-shadow: 1px 1px 3px rgba(17, 17, 17, 0.479);
+
+			@media all and (min-width: $md) {
+				background-color: transparent;
+				backdrop-filter: none;
+				box-shadow: none;
+			}
+
+
 		.header__wrapper {
 			background-color: rgba(17, 21, 39, 0.39);
 			backdrop-filter: blur(20px) saturate(1.7);

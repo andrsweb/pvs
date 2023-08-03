@@ -1,13 +1,41 @@
 .about__hero {
 	padding: 150px 0 10px;
 
+	@media all and (min-width: $sm) {
+		padding: 200px 0 10px;
+	}
+
+	@media all and (min-width: $xl) {
+		padding: 100px 0 10px;
+	}
+
 	.h1 {
 		font-family: $ff;
-		font-size: 77.09px;
+		font-size: 33px;
 		font-style: normal;
 		font-weight: $fw-bold;
 		line-height: normaz;
-		text-transform: uppercase; 
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 50px;
+		text-align: left;
+
+		@media all and (min-width: $sm) {
+			font-size: 40px;
+			margin-bottom: 80px;
+		}
+
+		@media all and (min-width: 558px) {
+			margin-bottom: 120px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 77.09px;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-bottom: 0;
+		}
 	}
 
 	&_wrapper {
@@ -17,22 +45,79 @@
 
 	&_info {
 		max-width: 1100px;
+
+		@media all and (min-width: $xl) {
+			max-width: 800px;
+		}
+
+		@media all and (min-width: 1700px) {
+			max-width: 1100px;
+		}
 	}
 
 	.about__info_text {
 		color: #98A1F7;
 		font-family: $ff;
-		font-size: 19.04px;
+		font-size: 9px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: 180%;
 		letter-spacing: 0.286px;
+
+		@media all and (min-width: $sm) {
+			font-size: 19px;
+		}
 	}
 
 	.hero__img {
-		position: absolute;
-		right: -17%;
-		top: 50%;
-		transform: translateY(-50%);
+
+		&.mobile {
+			right: -30px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@media all and (min-width: $sm) {
+				right: -60px;
+			}
+
+			@media all and (min-width: 558px) {
+				position: absolute;
+				max-width: 60%;
+			}
+
+			@media all and (min-width: $xl) {
+				display: none;
+			}
+		}
+
+		&.desktop {
+			display: none;
+
+			@media all and (min-width: $xl) {
+				position: absolute;
+				display: block;
+				right: -8%;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			@media all and (min-width: $xxl) {
+				img {
+					max-width: 100%;
+				}
+			}
+
+			@media all and (min-width: 1700px) {
+				display: block;
+				right: -17%;
+				top: 50%;
+				transform: translateY(-50%);
+
+				img {
+					max-width: 120%;
+				}
+			}
+		}
+		
 	}
 }

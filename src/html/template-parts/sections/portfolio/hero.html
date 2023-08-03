@@ -3,6 +3,46 @@
 		<div class="portfolio__buttons">
 			@@include('./buttons.html')
 		</div>
+		<div class="portfolio__swiper">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<button class="portfolio__button active" type="button" data-id="0">
+							ALL
+						</button>
+						<button class="portfolio__button" type="button" data-id="1">
+							TOP VIDEOS
+						</button>
+						<button class="portfolio__button" type="button" data-id="2">
+							VSL
+						</button>
+						<button class="portfolio__button" type="button" data-id="3">
+							PODCAST
+						</button>
+					</div>
+					<div class="swiper-slide">
+						<button class="portfolio__button" type="button" data-id="4">
+							EXPLAINER
+						</button>
+						<button class="portfolio__button" type="button" data-id="5">
+							SHORTS
+						</button>
+						<button class="portfolio__button" type="button" data-id="7">
+							GAMING
+						</button>
+						<button class="portfolio__button" type="button" data-id="8">
+							STOCK VIDEOS
+						</button>
+					</div>
+				</div>
+				<div class="swiper-prev">
+					<img src="img/ico/left.svg" width="31" height="47" alt="">
+				</div>
+				<div class="swiper-next">
+					<img src="img/ico/right.svg" width="31" height="47" alt="">
+				</div>
+			</div>
+		</div>
 		@@include('./all.html')
 		@@include('./top.html')
 		@@include('./vsl.html')
