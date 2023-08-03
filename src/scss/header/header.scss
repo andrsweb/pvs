@@ -1,22 +1,43 @@
 .header {
 	position: fixed;
 	left: 0;
-	top: 95px;
+	top: 45px;
 	width: 100vw;
+	z-index: 100;
+
+	.container {
+		display: flex;
+		justify-content: center;
+	}
+
+	&.scrolled {
+		.header__wrapper {
+			background-color: rgba(17, 21, 39, 0.39);
+			backdrop-filter: blur(20px) saturate(1.7);
+			box-shadow: 1px 1px 3px rgba(17, 17, 17, 0.479);
+		}
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		position: relative;
+		width: 600px;
+		padding: 20px 30px;
+		border-radius: 20px;
+		transition: background-color ease $tr,
+					backdrop-filter ease $tr,
+					box-shadow ease $tr;
 	}
 
 	&__logo {
+		width: 90px;
 		position: absolute;
-		transition: opacity ease $tr;
 		left: 50%;
 		top: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%,-50%);
+		transition: opacity ease $tr;
 
 		&:hover {
 			opacity: $op;
@@ -28,11 +49,8 @@
 		align-items: center;
 
 		&_left {
-			width: 50%;
 			display: flex;
-			justify-content: flex-end;
-			padding-right: 15%;
-
+			margin-right: auto;
 			.nav__link {
 				&:last-child {
 					margin-left: auto;
@@ -41,15 +59,7 @@
 		}
 
 		&_right {
-			width: 50%;
 			display: flex;
-			padding-left: 15%;
-
-			.nav__link {
-				&:first-child {
-					margin-right: auto;
-				}
-			}
 		}
 	}
 
@@ -57,10 +67,11 @@
 		font-family: $ff-title;
 		font-weight: $fw-medium;
 		text-transform: uppercase;
-		font-size: 35px;
-		line-height: 46px;
+		font-size: 20px;
+		line-height: 20px;
 		color: #898CF9;
 		transition: opacity ease $tr;
+		margin-right: 30px;
 
 		&:last-child {
 			margin-right: 0;
