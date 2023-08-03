@@ -11,14 +11,18 @@ h6, .h6 {
 }
 
 h1, .h1 {
-	font-family: Gayathri;
+	font-family: $ff-title;
 	font-size: 40px;
 	font-weight: 700;
 	line-height: 40px;
 	letter-spacing: 0em;
 	text-align: left;
 	color: #8E98F5;
-	
+	background-image: radial-gradient(50% 50%at 50% 50%, #8e98f5, #7f73ff);
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 10px 0;
 
 	@media all and (min-width: $lg) {
 		font-size: 143px;
@@ -28,6 +32,10 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: 24px;
+	background-image: radial-gradient(50% 50%at 50% 50%, #8e98f5, #7f73ff);
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 	@media all and (min-width: $lg) {
 		font-size: 36px
