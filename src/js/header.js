@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	closeMenuByTapLink()
 })
 
-const headerScroll = () => {
+const headerScroll = () => {                 //Header scroll function, if header scrolltop > 0, header add class 'scrolled'
 	window.addEventListener('scroll', () => {
 		const scrollTop = window.scrollY
 		const header = document.querySelector('.header')
@@ -28,7 +28,7 @@ const headerScroll = () => {
 const toogleBurgerMenu = () => {
 	const burgerButton = document.querySelector('.burger__button')
 	const headerWrapper = document.querySelector('.header__wrapper')
-	setTargetElement(document.querySelector('#menu-lock'))
+	setTargetElement(document.querySelector('#menu-lock')) //Target element for body lock
 
 	burgerButton.addEventListener('click', () => {
 
@@ -45,7 +45,7 @@ const toogleBurgerMenu = () => {
 		}
 	})
 
-	window.addEventListener('resize', () => {
+	window.addEventListener('resize', () => {        //Resize function, if window width >= 768, remove all active classes on burger menu and button
 		const windowWidth = window.innerWidth
 		const WINDOW_WIDTH_MD = 768
 

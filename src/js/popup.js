@@ -35,7 +35,7 @@ const callPopup = () => {
 		enableBodyScroll( getTargetElement() )
 	})
 
-	popup.addEventListener( 'click', e => {
+	popup.addEventListener( 'click', e => {      // CLose popup by tap anywhere
 		e.stopPropagation()
 
 		const target = e.target

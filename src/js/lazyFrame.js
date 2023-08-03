@@ -7,7 +7,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 } )
 
 const lazy = () => {
-	let elements = document.querySelectorAll( '.frame' )
+	let elements = document.querySelectorAll( '.frame' ) //Get all frames, on click iframe puts into this frame
 
 	lazyframe(elements, {
 		debounce: 1000,
