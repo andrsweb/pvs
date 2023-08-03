@@ -13,12 +13,16 @@
 
 		.h2 {
 			font-family: $ff-title;
-			font-size: 108.812px;
+			font-size: 40px;
 			font-style: normal;
 			font-weight: $fw-bold;
 			line-height: normal;
 			text-transform: uppercase;
 			color: #8E98F5;
+
+			@media all and (min-width: $md) {
+				font-size: 108.812px;
+			}
 		}
 
 		&_text {

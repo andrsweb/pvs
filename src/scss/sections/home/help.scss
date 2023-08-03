@@ -1,122 +1,374 @@
 .help {
-	padding: 100px 0 600px;
+	padding: 100px 0 100px;
+
+	@media all and (min-width: $lg) {
+		padding: 100px 0 600px;
+	}
 
 	.h2 {
 		font-family: $ff-title;
-		font-size: 73.065px;
+		font-size: 40px;
 		font-style: normal;
 		font-weight: $fw-bold;
 		line-height: normal;
 		text-transform: uppercase;
 		color: #8E98F5;
+
+		@media all and (min-width: $md) {
+			font-size: 73.065px;
+		}
 	}
 
 	&__text {
 		color: rgba(255, 255, 255, 0.50);
 		font-family: $ff;
-		font-size: 22.635px;
+		font-size: 12px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: 180%;
 		letter-spacing: 0.34px;
-		max-width: 675px;
+
+		@media all and (min-width: 576px) {
+			max-width: 675px;
+			
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 22.635px;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
+		position: relative;
 	}
 
 	&__info {
-		width: 50%;
+		width: 100%;
+
+		@media all and (min-width: 576px) {
+			width: 50%;
+		}
 
 		.help__cards {
 			position: relative;
 
 			.help__card {
-				position: absolute;
+				@media all and (min-width: 576px) {
+					position: absolute;
 
-				&:first-child {
-					left: -1.56vw;
-					top: 5.21vw;
+					&:first-child {
+						left: -1.56vw;
+						top: 5.21vw;
+					}
+	
+					&:nth-child(2) {
+						left: 95%;
+						top: 2.6vw;
+					}
+	
+					&:nth-child(3) {
+						left: 145%;
+						top: 5%;
+					}
+	
+					&:last-child {
+						left: 50%;
+						top: 0;
+					}
 				}
 
-				&:nth-child(2) {
-					left: 16.67vw;
-					top: 2.6vw;
-				}
+				@media all and (min-width: $lg) {
+					position: absolute;
 
-				&:nth-child(3) {
-					left: 7.81vw;
-					top: 18.23vw;
-				}
-
-				&:last-child {
-					left: 27.08vw;
-					top: 17.71vw;
+					&:first-child {
+						left: -1.56vw;
+						top: 5.21vw;
+					}
+	
+					&:nth-child(2) {
+						left: 16.67vw;
+						top: 2.6vw;
+					}
+	
+					&:nth-child(3) {
+						left: 7.81vw;
+						top: 18.23vw;
+					}
+	
+					&:last-child {
+						left: 27.08vw;
+						top: 17.71vw;
+					}
 				}
 			}
 		}
 	}
 
 	&__cards {
-		width: 50%;
 		position: relative;
 
-		.help__card {
-			position: absolute;
+		&.top {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin-top: 30px;
 
+			@media all and (min-width: 576px) {
+				margin-top: 0;
+			}
+
+			.help__card {
+				margin-right: 10px;
+
+				&:first-child {
+					margin-top: 20px;
+				}
+	
+				&:nth-child(3) {
+					margin-top: 30px;
+				}
+			}
+		}
+
+		&.bottom {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			bottom: -80px;
+			left: 0;
+
+			@media all and (min-width: 576px) {
+				position: static;
+				width: 50%;
+			}
+
+			.help__card {
+				margin-right: 10px;
+
+				@media all and (min-width: 576px) {
+					margin-right: 0;
+				}
+
+				@media all and (min-width: 576px) {
+					&:first-child {
+							margin-top: 0;
+						}
+		
+					&:nth-child(3) {
+							margin-top: 0;
+							right: 0;
+							top: 15%;
+						}
+		
+					&:nth-child(5) {
+						position: absolute;
+						left: 0%;
+						top: 90px;
+					}
+	
+					&:last-child {
+						margin-right: 0;
+						position: absolute;
+						left: 70%;
+						top: 100px;
+					}
+				}
+
+				&:first-child {
+					margin-top: 20px;
+
+					@media all and (min-width: 576px) {
+						margin-top: 0;
+					}
+				}
+	
+				&:nth-child(3) {
+					margin-top: 30px;
+
+					@media all and (min-width: 576px) {
+						margin-top: 0;
+						right: 0;
+						top: 15%;
+					}
+
+					@media all and (min-width: $xxl) {
+						top: 43%;
+					}
+				}
+	
+				&:nth-child(5) {
+					position: absolute;
+					left: 25%;
+					top: 90px;
+
+					@media all and (min-width: 576px) {
+						left: 70%;
+						top: 70%;
+					}
+
+					@media all and (min-width: 644px) {
+						top: 80%;
+					}
+
+					@media all and (min-width: 716px) {
+						left: 85%;
+					}
+
+					@media all and (min-width: $xxl) {
+						top: 110%;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+					position: absolute;
+					left: 70%;
+					top: 100px;
+
+					@media all and (min-width: $xxl) {
+						top: 190%;
+						left: 80%;
+					}
+				}
+			}
+		}
+
+		@media all and (min-width: 576px) {
+			width: 50%;
+		}
+
+		.help__card {
 			&:first-child {
-				right: 1.56vw;
-				top: -5.21vw;
+				right: 250px;
+				top: 200px;
 			}
 
 			&:nth-child(2) {
-				left: 2.6vw;
-				top: 7.29vw;
+				left: -90px;
+				top: 200px;
 			}
 
 			&:nth-child(3) {
-				right: -1.04vw;
-				top: 13.02vw;
+				right: 150px;
+				top: 200px;
 			}
 
 			&:nth-child(4) {
-				left: 4.17vw;
-				top: 23.44vw;
+				left: -130px;
+				top: 200px;
 			}
 
 			&:nth-child(5) {
-				right: -5.21vw;
-				top: 26.04vw;
+				right: 20px;
+				top: 250px;
 			}
 
 			&:last-child {
-				left: 13.02vw;
-				top: 38.54vw;
+				left: -140px;
+				top: 280px;
+			}
+
+			@media all and (min-width: 576px) {
+				position: absolute;
+
+				&:first-child {
+					right: 30px;
+					top: -5.21vw;
+				}
+	
+				&:nth-child(2) {
+					left: 55%;
+					top: 7.29vw;
+				}
+	
+				&:nth-child(3) {
+					right: 1%;
+					top: 13.02vw;
+				}
+	
+				&:nth-child(4) {
+					left: 50%;
+					top: 23.44vw;
+				}
+			}
+
+			@media all and (min-width: 716px) {
+				&:nth-child(4) {
+					left: 50%;
+					top: 20.44vw;
+				}
+			}
+
+			@media all and (min-width: 750px) {
+				&:nth-child(4) {
+					left: 55%;
+					top: 18.44vw;
+				}
+			}
+
+			@media all and (min-width: $lg) {
+				&:nth-child(4) {
+					left: 55%;
+					top: 25.44vw;
+				}
+			}
+
+			@media all and (min-width: $xxl) {
+				&:nth-child(4) {
+					left: 50%;
+					top: 22.44vw;
+				}
+			}
+
+			@media all and (min-width: $xxl) {
+				&:first-child {
+					right: 30px;
+					top: -3.21vw;
+				}
 			}
 		}
 	}
-
-
 
 	&__card {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 250px;
-		height: 190px;
+		width: 86px;
+		height: 65px;
 		padding: 10px;
 		background-color: #383284a6;
 		border-radius: 16px;
+
+		@media all and (min-width: $lg) {
+			width: 120px;
+			height: 120px;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 250px;
+			height: 190px;
+		}
 
 		&_title {
 			color: #B3BAFC;
 			text-align: center;
 			font-family: $ff;
-			font-size: 30.364px;
+			font-size: 10px;
 			font-style: normal;
 			font-weight: $fw-regular;
-			line-height: 180%;
+			line-height: normal;
+			white-space: nowrap;
+
+			@media all and (min-width: $lg) {
+				font-size: 15px;
+			}
+
+			@media all and (min-width: $xxl) {
+				line-height: 180%;
+				font-size: 30.364px;
+			}
 		}
 	}
 }

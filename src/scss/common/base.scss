@@ -10,10 +10,6 @@ html {
 	margin: 0;
 }
 
-html {
-	overflow-y: scroll;
-}
-
 body {
 	position: relative;
 	min-width: 300px;
@@ -24,6 +20,7 @@ body {
 	line-height: $lh;
 	color: $black;
 	background-color: $bg;
+	overflow-y: scroll;
 }
 
 img {
@@ -145,5 +142,13 @@ textarea {
 
 	.lazyframe__title {
 		display: none;
+	}
+}
+
+.container {
+	padding: 0 10px;
+
+	@media all and (min-width: $md) {
+		padding: 0 24px;
 	}
 }

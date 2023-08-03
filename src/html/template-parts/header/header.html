@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,36 +14,44 @@
 	<link rel="shortcut icon" href="favicon/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="favicon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">	
-	
+	<meta name="theme-color" content="#ffffff">
+
 	<title>@@title</title>
 	<link rel="stylesheet" href="css/main.min.css" />
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<div class="header__wrapper">
-					<nav class="header__nav_left">
-						<a href="/" class="nav__link active">
-							HOME
-						</a>
-						<a href="portfolio.html" class="nav__link">
-							PORTFOLIO
-						</a>
-						
-					</nav>
-					<a href="/" class="header__logo">
+				<div class="header__mobile_wrapper">
+					<a href="/" class="header__logo_mobile">
 						<img src="img/header/logo.png" width="128" height="72" alt="">
 					</a>
-					<nav class="header__nav_right">
-						<a href="about.html" class="nav__link">
-							ABOUT
+					<div class="header__wrapper" id="menu-lock">
+						<nav class="header__nav_left">
+							<a href="/" class="nav__link active">
+								HOME
+							</a>
+							<a href="portfolio.html" class="nav__link">
+								PORTFOLIO
+							</a>
+						</nav>
+						<a href="/" class="header__logo">
+							<img src="img/header/logo.png" width="128" height="72" alt="">
 						</a>
-						<a href="contacts.html" class="nav__link">
-							CONTACT
-						</a>
-					</nav>
+						<nav class="header__nav_right">
+							<a href="about.html" class="nav__link">
+								ABOUT
+							</a>
+							<a href="contacts.html" class="nav__link">
+								CONTACT
+							</a>
+						</nav>
+					</div>
+					<div class="burger__button">
+						<span></span>
+					</div>
 				</div>
 			</div>
 		</header>

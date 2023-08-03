@@ -18,17 +18,84 @@
 		}
 	}
 
-	&__wrapper {
+	&__mobile_wrapper {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			justify-content: center;
+		}
+	}
+
+	&__wrapper {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
 		position: relative;
-		width: 600px;
-		padding: 20px 30px;
+		width: 100%;
 		border-radius: 20px;
 		transition: background-color ease $tr,
-					backdrop-filter ease $tr,
-					box-shadow ease $tr;
+			backdrop-filter ease $tr,
+			box-shadow ease $tr;
+		overflow-y: auto;
+
+		@media all and (min-width: $md) {
+			display: flex;
+			justify-content: center;
+			padding: 20px 30px;
+			width: 600px;
+		}
+
+		&.opened {
+			position: fixed;
+			right: 0;
+			top: 0;
+			padding: 200px 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			width: 100vw;
+			height: 100vh;
+			border-radius: 0;
+			background-color: rgba(17, 21, 39, 0.39);
+			-webkit-backdrop-filter: blur(20px) saturate(1.7);
+			backdrop-filter: blur(20px) saturate(1.7);
+			-webkit-box-shadow: 1px 1px 3px rgba(17, 17, 17, 0.479);
+			box-shadow: 1px 1px 3px rgba(17, 17, 17, 0.479);
+			animation: fade 1s forwards ease;
+
+			@keyframes fade {
+				0% {
+					opacity: 0;
+					background-color: transparent;
+					backdrop-filter: none;
+				}
+
+				50% {
+					background-color: rgba(17, 21, 39, 0.39);
+				}
+
+				100% {
+					backdrop-filter: blur(20px) saturate(1.7);
+				}
+			}
+
+			.header__nav_left, .header__nav_right {
+				display: flex;
+				flex-direction: column;
+				margin: 0;
+			}
+
+			.nav__link {
+				margin-right: 0;
+				text-align: center;
+				margin-bottom: 50px;
+				font-weight: $fw-bold;
+				font-size: 30px;
+			}
+		}
 	}
 
 	&__logo {
@@ -36,8 +103,23 @@
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 		transition: opacity ease $tr;
+		display: none;
+
+		@media all and (min-width: $md) {
+			display: block;
+		}
+
+		&_mobile {
+			width: 70px;
+			position: relative;
+			z-index: 20;
+
+			@media all and (min-width: $md) {
+				display: none;
+			}
+		}
 
 		&:hover {
 			opacity: $op;
@@ -49,8 +131,8 @@
 		align-items: center;
 
 		&_left {
-			display: flex;
 			margin-right: auto;
+
 			.nav__link {
 				&:last-child {
 					margin-left: auto;
@@ -84,5 +166,86 @@
 		&:hover {
 			opacity: $op;
 		}
+	}
+}
+
+.burger__button {
+	position: relative;
+	width: 47px;
+	height: 23px;
+	cursor: pointer;
+
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 4px;
+		background-color: $accent;
+		transition: transform ease $tr;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background-color: $accent;
+		}
+
+		&::before {
+			top: 10px;
+			width: 90%;
+			left: 15px;
+			transition: left ease $tr,
+				opacity ease $tr, width ease $tr;
+		}
+
+		&::after {
+			top: 20px;
+			left: 10px;
+			width: 80%;
+			transition: transform ease $tr,
+				left ease $tr,
+				width ease $tr;
+		}
+	}
+
+	&:hover {
+		span::before {
+			width: 100%;
+			left: 0;
+		}
+
+		span::after {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&.opened {
+		span {
+			transform: rotate(-45deg);
+			top: 10px;
+		}
+
+		span::before {
+			opacity: 0;
+		}
+
+		span::after {
+			transform: rotate(90deg);
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	@media all and (min-width: $md) {
+		display: none;
 	}
 }

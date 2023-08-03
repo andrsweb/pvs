@@ -1,5 +1,9 @@
 .featured {
-	padding: 100px 0;
+	padding: 50px 0 20px;
+
+	@media all and (min-width: $lg) {
+		padding: 100px 0;
+	}
 
 	.container {
 		max-width: 1480px;
@@ -7,19 +11,28 @@
 
 	.h2 {
 		font-family: $ff-title;
-		font-size: 143px;
+		font-size: 40px;
 		font-weight: $fw-bold;
-		line-height: 175px;
+		line-height: 60px;
 		letter-spacing: 0em;
 		text-align: center;
 		color: #8E98F5;
 		margin-bottom: 30px;
+
+		@media all and (min-width: $md) {
+			font-size: 143px;
+			line-height: 175px;
+		}
 	}
 
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -13px;
+		margin: 0 -5px;
+
+		@media all and (min-width: $md) {
+			margin: 0 -13px;
+		}
 
 		&_wrapper {
 			margin: 0 auto;
@@ -28,11 +41,20 @@
 	}
 
 	&__item {
-		padding: 0 13px;
-		width: calc(100% / 3);
-		height: 235px;
+		padding: 0 5px;
+		width: calc(100% / 2);
+		height: 110px;
 		border-radius: 20px;
 		margin-bottom: 26px;
+
+		@media all and (min-width: 576px) {
+			height: 235px;
+		}
+
+		@media all and (min-width: $md) {
+			width: calc(100% / 3);
+			padding: 0 13px;
+		}
 
 		&_text {
 			display: none;

@@ -1,5 +1,9 @@
 .testimonials {
-	padding: 100px 0;
+	padding: 50px 0;
+
+	@media all and (min-width: $lg) {
+		padding: 100px 0;
+	}
 
 	.container {
 		max-width: 1480px;
@@ -7,26 +11,34 @@
 	
 	.h2 {
 		font-family: $ff-title;
-		font-size: 138.634px;
+		font-size: 40px;
 		font-style: normal;
 		font-weight: $fw-bold;
 		line-height: normal;
 		text-transform: uppercase;
 		color: #7F73FF;
 		text-align: center;
+
+		@media all and (min-width: $md) {
+			font-size: 138.634px;
+		}
 	}
 
 	.h3 {
 		display: inline;
 		color: #8D94F6;
 		font-family: $ff;
-		font-size: 39.371px;
+		font-size: 12px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
 		text-align: center;
 		position: relative;
 		margin-bottom: 65px;
+
+		@media all and (min-width: $md) {
+			font-size: 39.371px;
+		}
 
 		&::before {
 			content: "";
@@ -48,14 +60,27 @@
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -40px;
+		margin: 0 -10px;
+
+		@media all and (min-width: $lg) {
+			margin: 0 -40px;
+		}
 	}
 	
 	.testimonial {
 		&__item {
-			width: calc(100% / 3);
-			padding: 0 40px;
+			width: calc(100% / 1);
+			padding: 0 10px;
 			position: relative;
+			margin-bottom: 40px;
+
+			@media all and (min-width: $md) {
+				width: calc(100% / 3);
+			}
+
+			@media all and (min-width: $lg) {
+				padding: 0 40px;
+			}
 
 			&::before {
 				content: "";
@@ -86,39 +111,49 @@
 			border-radius: 16px;
 			position: relative;
 			z-index: 1;
-
-			
 		}
 
 		&__quotes {
 			color: #FFF;
 			font-family: $ff;
-			font-size: 64.083px;
+			font-size: 22px;
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
 			margin-right: auto;
+
+			@media all and (min-width: $lg) {
+				font-size: 64.083px;
+			}
 		}
 
 		&__text {
 			color: $white;
 			font-family: $ff;
-			font-size: 20.026px;
+			font-size: 12px;
 			font-style: normal;
 			font-weight: $fw-bold;
 			line-height: normal;
 			text-align: center;
 			margin-bottom: 39px;
+
+			@media all and (min-width: $lg) {
+				font-size: 20.026px;
+			}
 		}
 
 		&__name {
 			color: $white;
 			font-family: $ff;
-			font-size: 20.026px;
+			font-size: 12px;
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal; 
 			margin-top: 6px;
+
+			@media all and (min-width: $lg) {
+				font-size: 20.026px;
+			}
 		}
 	}
 

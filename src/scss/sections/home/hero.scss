@@ -1,49 +1,104 @@
 .hero {
-	padding: 100px 0 50px;
+	padding: 150px 0 50px;
+
+	@media all and (min-width: $lg) {
+		padding: 100px 0 50px;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
+		position: relative;
+
+		@media all and (min-width: 558px) {
+			flex-direction: column;
+		}
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	&__info {
-		width: 54%;
-		padding-top: 9%;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: 54%;
+			padding-top: 9%;
+		}
 	}
 
 	&__img {
-		width: 46%;
+		width: 130px;
+		position: absolute;
+		right: -30px;
+		top: 5px;
+
+		@media all and (min-width: 380px) {
+			width: 200px;
+			right: -50px;
+			top: -40px;
+		}
+
+		@media all and (min-width: $sm) {
+			width: 300px;
+			right: -50px;
+			top: -120px;
+		}
+
+		@media all and (min-width: 558px) {
+			position: static;
+			width: 100%;
+		}
 
 		img {
 			@media all and (min-width: $xl) {
 				max-width: 130%;
 			}
-			
+		}
+
+		@media all and (min-width: $md) {
+			width: 46%;
 		}
 	}
 
 	.h1 {
-		margin-bottom: 40px;
+		margin-bottom: 10px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 40px;
+		}
 	}
 
 	.h3 {
 		font-family: $ff-title;
-		font-size: 29px;
+		font-size: 18px;
 		font-weight: $fw-bold;
 		line-height: 43px;
 		letter-spacing: 0em;
 		text-align: left;
 		color: #8E98F5;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+
+		@media all and (min-width: $lg) {
+			font-size: 43px;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__text {
 		font-family: $ff-title;
-		font-size: 24px;
+		font-size: 14px;
 		font-weight: 400;
-		line-height: 39px;
+		line-height: 24px;
 		letter-spacing: 0em;
-		text-align: left;
+		text-align: center;
 		color: #8E98F5;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+			line-height: 39px;
+			text-align: left;
+		}
 	}
 }
