@@ -1,0 +1,120 @@
+.help {
+	padding: 100px 0 600px;
+
+	.h2 {
+		font-family: $ff-title;
+		font-size: 73.065px;
+		font-style: normal;
+		font-weight: $fw-bold;
+		line-height: normal;
+		text-transform: uppercase;
+		color: #8E98F5;
+	}
+
+	&__text {
+		color: rgba(255, 255, 255, 0.50);
+		font-family: $ff;
+		font-size: 22.635px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 180%;
+		letter-spacing: 0.34px;
+		max-width: 675px;
+	}
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__info {
+		width: 50%;
+
+		.help__cards {
+			position: relative;
+
+			.help__card {
+				position: absolute;
+	
+				&:first-child {
+					left: -30px;
+					top:100px;
+				}
+
+				&:nth-child(2) {
+					left: 320px;
+					top: 50px;
+				}
+
+				&:nth-child(3) {
+					left: 150px;
+					top: 350px;
+				}
+
+				&:last-child {
+					left: 520px;
+					top: 340px;
+				}
+			}
+		}
+	}
+
+	&__cards {
+		width: 50%;
+		position: relative;
+
+		.help__card {
+			position: absolute;
+
+			&:first-child {
+				right: 30px;
+				top: -100px;
+			}
+			
+			&:nth-child(2) {
+				left: 50px;
+				top: 140px;
+			}
+
+			&:nth-child(3) {
+				right: -20px;
+				top: 250px;
+			}
+
+			&:nth-child(4) {
+				left: 80px;
+				top: 450px;
+			}
+
+			&:nth-child(5) {
+				right: -100px;
+				top: 500px;
+			}
+
+			&:last-child {
+				left: 250px;
+				top: 740px;
+			}
+		}
+	}
+
+	&__card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 250px;
+		height: 190px;
+		padding: 10px;
+		background-color: #383284a6;
+		border-radius: 16px;
+
+		&_title {
+			color: #B3BAFC;
+			text-align: center;
+			font-family: $ff;
+			font-size: 30.364px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 180%;
+		}
+	}
+}
