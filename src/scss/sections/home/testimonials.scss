@@ -5,6 +5,47 @@
 		padding: 100px 0;
 	}
 
+	&.scrolled {
+		.h2 {
+			animation: testiTitle 1s forwards ease;
+			@keyframes testiTitle {
+				0% {
+					transform: translateX(-100%)
+				}
+
+				100% {
+					transform: translateX(0);
+				}
+			}
+		}
+
+		.h3 {
+			animation: testiH3 1s forwards ease;
+			@keyframes testiH3 {
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		.testimonials__items {
+			animation: testiItems 3s forwards ease;
+			@keyframes testiItems {
+				0% {
+					scale: 0;
+				}
+
+				100% {
+					scale: 1;
+				}
+			}
+		}
+	}
+
 	.container {
 		max-width: 1480px;
 	}

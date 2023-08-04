@@ -59,15 +59,26 @@
 			@keyframes fade {
 				0% {
 					display: none;
+					transform: translateX(-130%);
 					opacity: 0;
+					filter: brightness(50%);
 				}
 
 				1% {
 					display: block;
 				}
 
+				25% {
+				}
+
+				50% {
+					filter: brightness(200%);
+				}
+
 				100% {
 					opacity: 1;
+					transform: translateX(0);
+					filter: brightness(100%);
 				}
 			}
 		}

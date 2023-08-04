@@ -13,6 +13,96 @@
 		padding: 100px 0 600px;
 	}
 
+	&.scrolled {
+		.h2 {
+			animation: helpH2 1s forwards ease;
+
+			@keyframes helpH2 {
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		.help__text {
+			animation: helpText 1s forwards ease;
+
+			@keyframes helpText {
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		.help__info {
+			animation: helpInfo 1s forwards ease;
+
+			@keyframes helpInfo {
+				0% {
+					transform: translateX(100%);
+				}
+
+				100% {
+					transform: translateX(0);
+				}
+			}
+		}
+
+		.help__card {
+			animation: helpCard 3s forwards ease;
+
+			@keyframes helpCard {
+				0% {
+					scale: 0;
+					transform: rotate(0);
+				}
+
+				100% {
+					scale: 1;
+					transform: rotate(360deg);
+				}
+			}
+
+			&::first-child {
+				animation: help1 1s forwards ease;
+
+				@keyframes help1 {
+					0% {
+						opacity: 0;
+						transform: translateZ(100%);
+					}
+	
+					100% {
+						opacity: 1;
+						transform: translateZ(0);
+					}
+				}
+			}
+
+			&:last-child {
+				animation: help2 1s forwards ease;
+
+				@keyframes help2 {
+					0% {
+						transform: translateY(100%);
+					}
+	
+					100% {
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+
 	.h2 {
 		font-family: $ff-title;
 		font-size: 40px;

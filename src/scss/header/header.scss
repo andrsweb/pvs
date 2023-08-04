@@ -9,6 +9,17 @@
 				padding ease $tr,
 				top ease $tr,
 				backdrop-filter ease $tr;
+	animation: move 1s forwards linear;
+
+	@keyframes move {
+		0% {
+			transform: translateY(-100%);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
 
 	.container {
 		display: flex;
