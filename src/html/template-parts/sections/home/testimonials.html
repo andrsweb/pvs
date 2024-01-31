@@ -9,11 +9,20 @@
 			</h3>
 		</div>
 		<div class="testimonials__items">
-			@@loop('./testi-item.html', [
-				{ 'text': 'The video editor\'s skillful edits elevated my videos, boosting audience retention and channel growth. His work has elevated viewer engagement. Thanks!', 'name': 'Freud Vixamir'},
-				{ 'text': 'Venkatesh is a great listener and is attentive to project guidelines and revisions. His response time is quick and his work is accurate.', 'name': 'Patrick Maq'},
-				{ 'text': 'My podcast has reached new heights thanks to the exceptional editing skills of this professional. Thank you!', 'name': 'Tom Alaimo'}
-			])
+            <div class="swiper testi-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include( './testi-item.html',{ 'text': 'The video editor\'s skillful edits elevated my videos, boosting audience retention and channel growth. His work has elevated viewer engagement. Thanks!', 'name': 'Freud Vixamir'})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include( './testi-item.html',{ 'text': 'My podcast has reached new heights thanks to the exceptional editing skills of this professional. Thank you!', 'name': 'Tom Alaimo'})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include( './testi-item.html',{ 'text': 'Venkatesh is a great listener and is attentive to project guidelines and revisions. His response time is quick and his work is accurate.', 'name': 'Patrick Maq'})
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
 		</div>
 	</div>
 </section>

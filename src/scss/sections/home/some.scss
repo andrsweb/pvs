@@ -1,0 +1,131 @@
+.some {
+    padding: 50px 0;
+
+    @media all and (min-width: $lg) {
+        padding: 100px 0;
+    }
+
+    &.scrolled {
+        .h2 {
+            animation: featuredTitle 2s forwards linear;
+    
+            @keyframes featuredTitle {
+                0% {
+                    opacity: 0;
+                }
+    
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .some__links {
+            animation: someOp 5s forwards ease;
+
+            @keyframes someOp {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .h2 {
+        font-family: $ff-title;
+		font-size: 40px;
+		font-weight: $fw-bold;
+		line-height: 60px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: #8E98F5;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $lg) {
+			font-size: 143px;
+			line-height: 175px;
+		}
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 20px; 
+        background-color: $accent;
+        transition: border-radius ease $tr, filter ease $tr;
+        background-image: url("../img/main-page/testimonials/2.webp");
+        background-size: cover;
+        z-index: -1;
+        background-repeat: no-repeat;
+        
+
+        @media all and (min-width: $md) {
+            padding: 50px;
+        }
+
+        &:hover {
+            border-radius: 24.509px 36.706px 67.084px 43.068px;
+            filter: brightness(120%);
+        }
+
+        &_img {
+            width: 100px;
+            height: 100px;
+            border-radius: 30.319px 50.531px 50.531px 20.844px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30.319px 50.531px 50.531px 20.844px;
+            }
+
+            @media all and (min-width: $md) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &_name {
+            font-family: $ff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: $fw-semibold;
+            line-height: normal;
+            color: $white;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            @media all and (min-width: $md) {
+                font-size: 30px;
+            }
+        }
+
+        &_info {
+            text-align: center;
+            font-family: $ff-title;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: $fw-regular;
+            line-height: normal;
+            color: $white;
+            text-transform: uppercase;
+            margin-top: 20px;
+
+            @media all and (min-width: $md) {
+                font-size: 30px;
+                margin-top: 30px;
+            }
+        }
+    }
+}

@@ -17,9 +17,10 @@
 		line-height: normaz;
 		text-transform: uppercase;
 		position: relative;
-		margin-bottom: 50px;
+		margin-bottom: 10px;
 		text-align: left;
 		animation: abouth1 1s forwards linear;
+
 		@keyframes abouth1 {
 			0% {
 				opacity: 0;
@@ -31,12 +32,12 @@
 		}
 
 		@media all and (min-width: $sm) {
-			font-size: 40px;
-			margin-bottom: 80px;
+			font-size: 58px;
+			margin-bottom: 20px;
 		}
 
 		@media all and (min-width: 558px) {
-			margin-bottom: 120px;
+			margin-bottom: 30px;
 		}
 
 		@media all and (min-width: $lg) {
@@ -45,6 +46,7 @@
 
 		@media all and (min-width: $xl) {
 			margin-bottom: 0;
+            font-size: 128px;
 		}
 	}
 
@@ -68,12 +70,13 @@
 	.about__info_text {
 		color: #98A1F7;
 		font-family: $ff;
-		font-size: 9px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: 180%;
 		letter-spacing: 0.286px;
 		animation: about 1s forwards linear;
+
 		@keyframes about {
 			0% {
 				scale: 0;
@@ -85,59 +88,11 @@
 		}
 
 		@media all and (min-width: $sm) {
-			font-size: 19px;
-		}
-	}
-
-	.hero__img {
-
-		&.mobile {
-			right: -30px;
-			top: 50%;
-			transform: translateY(-50%);
-
-			@media all and (min-width: $sm) {
-				right: -60px;
-			}
-
-			@media all and (min-width: 558px) {
-				position: absolute;
-				max-width: 60%;
-			}
-
-			@media all and (min-width: $xl) {
-				display: none;
-			}
+			font-size: 20px;
 		}
 
-		&.desktop {
-			display: none;
-
-			@media all and (min-width: $xl) {
-				position: absolute;
-				display: block;
-				right: -8%;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-
-			@media all and (min-width: $xxl) {
-				img {
-					max-width: 100%;
-				}
-			}
-
-			@media all and (min-width: 1700px) {
-				display: block;
-				right: -17%;
-				top: 50%;
-				transform: translateY(-50%);
-
-				img {
-					max-width: 120%;
-				}
-			}
+        @media all and (min-width: $md) {
+			font-size: 30px;
 		}
-		
 	}
 }

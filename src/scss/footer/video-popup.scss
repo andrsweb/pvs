@@ -46,7 +46,7 @@
 		left: 50%;
 		top: 50%;
 		border-radius: 20px;
-		animation: trans 1s forwards linear;
+		animation: trans $tr forwards linear;
 
 		@media all and (min-width: $sm) {
 			max-width: 400px;

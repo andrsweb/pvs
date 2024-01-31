@@ -24,28 +24,17 @@
 		}
 	}
 
-	.h2 {
-		margin-top: 70px;
-
-		@media all and (min-width: $xl) {
-			margin-top: 142px;
-		}
-
-		&:first-child {
-			margin-top: 0;
-		}
-	}
-
 	&__buttons {
+        padding: 18px;
 		width: 100%;
+        max-width: 700px;
+        display: flex;
 		justify-content: space-between;
-		margin-bottom: 73px;
-		display: none;
-
-		@media all and (min-width: $lg) {
-			display: flex;
-		}
-	}
+        border-radius: 30px;
+        background-color: rgba(116, 112, 253, 0.31);
+        backdrop-filter: blur(8.5px);
+        margin: 0 auto 73px auto;
+    }
 
 	&__items {
 		padding: 0 5%;
@@ -87,25 +76,41 @@
 	&__item {
 		&_videos {
 			display: flex;
+            justify-content: center;
 			flex-wrap: wrap;
-			margin: 0 -14px;
+            gap: 20px;
 
-			&.shorts {
-				width: 100%;
+            @media all and (min-width: $md) {
+                gap: 50px 100px;
+            }
 
-				.featured__item{
-					width: calc(100% / 3);
-					height: 200px;
+            .featured__item {
+                width: calc(50% - 20px);
+                height: 150px;
 
-					@media all and (min-width: 576px) {
-						height: 348px;
-					}
+                @media all and (min-width: $md) {
+                    width: calc(50% - 100px);
+                    height: 250px;
+                }
+            }
 
-					@media all and (min-width: $xl) {
-						width: calc(100% / 6);
-					}
-				}
-			}
+            &.shortform {
+                gap: 30px;
+
+                @media all and (min-width: $xxl) {
+                    gap: 50px 150px;
+                }
+
+                .featured__item {
+                    width: calc(50% - 30px);
+                    height: 250px;
+
+                    @media all and (min-width: $xxl) {
+                        width: calc(33.333% - 150px);
+                        height: 450px;
+                    }
+                }  
+            }
 		}
 	}
 
@@ -113,13 +118,19 @@
 		border: 0;
 		background-color: transparent;
 		padding: 4px 11px;
-		color: #898CF9;
-		font-family: Red Hat Display;
-		font-size: 20px;
+		color: $white;
+		font-family: $ff;
+		font-size: 15px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
 		cursor: pointer;
+        border-radius: 20px;
+        transition: background-color ease $tr;
+
+        @media all and (min-width: $sm) {
+            font-size: 20px;
+        }
 
 		@media all and (min-width: $xl) {
 			font-size: 23px;
@@ -130,72 +141,7 @@
 		}
 
 		&.active {
-			box-shadow: 0px 2px 17px 0px #5652BD;
-			background: linear-gradient(180deg, #5F5CCC 0%, #35328A 99.99%, #6D6ABE 100%);
-			animation: box 1s forwards ease;
-			
-			@keyframes box {
-				0% {
-					border-radius: 0;
-				}
-
-				100% {
-					border-radius: 30px;
-				}
-			}
-		}
-	}
-
-	.swiper {
-		height: 50px;
-		margin-bottom: 30px;
-
-		@media all and (min-width: $lg) {
-			display: none;
-		}
-		
-		.portfolio__button {
-			font-size: 11px;
-			height: 29px;
-
-			@media all and (min-width: $sm) {
-				font-size: 15px;
-			}
-
-			@media all and (min-width: 576px) {
-				font-size: 18px;
-			}
-
-			@media all and (min-width: $md) {
-				font-size: 21px;
-			}
-
-			&.active {
-				box-shadow: 0px 2px 7px 0px #5652BD;
-			}
-		}
-
-		.swiper-slide {
-			padding: 0 20px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-
-		.swiper-prev {
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: 90;
-			cursor: pointer;
-		}
-
-		.swiper-next {
-			position: absolute;
-			right: 0;
-			top: 0;
-			z-index: 90;
-			cursor: pointer;
+            background-color: #4B47D5;
 		}
 	}
 }
